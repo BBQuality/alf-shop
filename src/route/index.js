@@ -12,9 +12,19 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'main',
+    title: "Alforov Shop - Офіційний Online-магазин",
+    lang: "uk-UA",
+    translate: "yes",
+    tagline: "Alf’orov Shop",
+    description: "Одяг для справжніх любителів історії",
+    author: "Олександр Алфьоров",
+    buy: "Додати в кошик",
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
 
 // ================================================================
 

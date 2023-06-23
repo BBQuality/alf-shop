@@ -1,0 +1,150 @@
+@font-face {
+    font-family: KyivTypeSerif-Thin;
+    src: url('/font/KyivTypeSerif-Thin.ttf');
+}
+
+:root {
+    --color-white: #FFFFFF;
+
+
+
+    --page-width-full: 1920px;
+    --page-width-extra: 1600px;
+    --page-width-big: 1260px;
+    --page-width-medium: 1000px;
+    --page-width-small: 700px;
+
+    --spacing-1: 8px;
+    --spacing-2: 12px;
+    --spacing-3: 16px;
+    --spacing-4: 20px;
+    --spacing-5: 24px;
+    --spacing-6: 28px;
+    --spacing-7: 32px;
+    --spacing-8: 36px;
+    --spacing-9: 42px;
+    --spacing-10: 48px;
+    --spacing-11: 52px;
+
+    --size-1: 14px;
+    --size-2: 18px;
+    --size-3: 20px;
+    --size-4: 26px;
+    --size-5: 32px;
+
+    --border-radius: 4px;
+
+    --color-light: #F4EDE4;
+    --color-primary: #611F69;
+    --color-text: #000000;
+}
+
+body {
+    body {
+    font-family: 'KyivTypeSerif-Thin', sans-serif;
+
+    background: var(--color-white);
+
+    
+}
+}
+
+.page {
+    display: grid;
+    
+}
+
+.page_content {
+    display: flex;
+    width: 100%;
+
+}
+
+.page_section {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+
+}
+
+header {
+    background: black;
+    background-position: top left;
+    color: var(--color-white);
+    align-content: center;
+    box-sizing: content-box;
+    justify-content: space-between;
+    z-index: 3;
+
+}
+
+.header_graf {
+    display: inline-flex;
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+.header_background {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.logo_header {
+    position: absolute;
+}
+
+.header_content {
+    position: absolute;   
+    padding: var(--spacing-3);
+}
+
+@layer adaptive {
+
+@media all and (1900px <= width) {
+        .page_content {
+            max-width: var(--page-width-full);
+        }
+
+        header {
+            background-image: url(/img/header_background.webp);
+        }
+    }
+
+@media all and (1600px <= width < 1920px) {
+        .page_content {
+            max-width: var(--page-width-extra);
+        }
+    }
+
+@media all and (1260px <= width < 1600px) {
+    .page_content {
+        max-width: var(--page-width-big);
+    }
+}
+
+@media all and (1000px <= width < 1260px) {
+    .page_content {
+        max-width: var(--page-width-medium);
+    }
+
+}
+
+@media all and (width < 1000px) {
+    .page_content {
+        max-width: var(--page-width-small);
+    }
+
+}
+
+@media all and (width < 550px) {
+
+
+}
+
+@media all and (width < 350px) {
+    
+    
+}
+}
